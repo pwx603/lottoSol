@@ -13,9 +13,10 @@ const {
 // web3 = new Web3(ganache.provider()); 
 
 let accounts;
-let contract
+let contract;
 
 beforeEach(async () => {
+    console.log(interface)
     accounts = await web3.eth.getAccounts();
 
     contract = await new web3.eth.Contract(JSON.parse(interface))
